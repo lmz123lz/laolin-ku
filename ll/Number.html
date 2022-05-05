@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onclick="aa(arr)">
+        <h1 id="box">离开家</h1>
+    </div>
+</body>
+</html>
+<script>
+    const arr=[1,3,4,7,6,9,8]
+    function aa(arr){
+    //     setTimeout(() => {
+    //          //获取父节点
+    //     var box=document.getElementById('box')
+    //     //创建新节点
+    //     var bb=document.createElement('span')
+    //     bb.innerHTML='两岸三地'
+    //     box.appendChild(bb)
+    //     }, 500);
+    //    console.log(this);
+        for(let i=0;i<arr.length;i++ ){
+            for(let j=0;j<arr.length-1;j++ ){
+                if(arr[j]>arr[j+1]){
+                    //交换
+                    let newarr=arr[j]
+                    arr[j]=arr[j+1]
+                    arr[j+1]=newarr
+                }
+            }
+        }
+    console.log(arr);
+    }
+</script>
